@@ -68,7 +68,10 @@ class Payment extends react.Component {
             },
 
             body: JSON.stringify(data_pay)
-        }).then(response => response.json()).catch(err => console.log(err))
+        }).then(response => response.json(), setTimeout(() => {
+            console.log('in payment');
+        }, 1000)).catch(err => console.log(err))
+
     }
     saveUserOrders = () => {
         let items = [];
