@@ -105,7 +105,7 @@ class Payment extends react.Component {
             amount: subtotal,
             email
         };
-        console.log('payobj', paymentObj);
+
         this.getData(paymentObj).then(response => {
             console.log('resp', response);
             var information = {
