@@ -97,7 +97,8 @@ class Payment extends react.Component {
         }
 
     }
-    Payments = () => {
+    Payments = (e) => {
+        e.preventDefault();
         const { subtotal, email } = this.state;
 
         const paymentObj = {
