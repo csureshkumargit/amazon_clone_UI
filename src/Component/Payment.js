@@ -50,9 +50,6 @@ class Payment extends react.Component {
     }
 
     post = (details) => {
-        setTimeout(() => {
-            console.log('Add');
-        }, 1500)
         const form = this.buildForm(details);
         document.body.appendChild(form);
         form.submit();
@@ -70,12 +67,8 @@ class Payment extends react.Component {
             },
 
             body: JSON.stringify(data_pay)
-        }).then(response => {
-            setTimeout(() => {
-                console.log('payment')
-            }, 1500)
-            response.json()
-        }).catch(err => console.log(err))
+        }).then(response =>
+            response.json()).catch(err => console.log(err))
 
     }
     saveUserOrders = () => {
