@@ -1,0 +1,38 @@
+.kids-brands-icon{
+    width:100%;
+    height: 12em;
+    padding:2%;
+    cursor: pointer;
+}
+
+.kids-brands-icon:hover{
+    background-color: skyblue;
+}
+
+
+.kids-heading{
+    font-size: 3em;
+    margin-left: 5.7%;
+    padding-bottom: 3%;
+    font-family: serif;
+}
+
+.rec-pagination{
+    display:none;
+}
+.legend{
+    font-size: 2em;
+    font-family: serif;
+}
+
+
+@media only screen and (min-width: 600px) and (max-width:767px){
+    .kids-heading {
+        font-size: 2.5em;
+    }}
+    
+    @media only screen and (max-width:600px){
+        .kids-heading {
+            font-size: 1.8em;
+        }
+    }

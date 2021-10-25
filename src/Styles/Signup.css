@@ -1,0 +1,344 @@
+@media only screen and (max-width:600px){
+    .sign-up-heading
+    {
+        margin-left: 10em;
+    font-size: 1em;
+    margin-top: 1em;
+}
+.sign-up-account{
+    padding-bottom: 25em;
+    padding-top: 1em;
+}
+
+.sign-up-usr-acct-lbl{
+    display: block;
+    margin-left:10.5em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    text-transform: capitalize;
+    font-weight:500;
+    
+}
+
+.sign-up-acct-input{
+    margin-left: 10.5em;
+    width: 15em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 8em;
+    outline: none;
+}
+
+.btn-user-sign-up-submit{
+    margin-left: 11.5em;
+    padding: 0.5em;
+    margin-top: 2em;
+    width: 15em;
+    background-color: darkgoldenrod;
+    border-radius: 10em;
+    border: 0;
+}
+
+.usr-message{
+
+    margin-top: 2em;
+    height: 5em;
+    width: 22em;
+    margin-left: 47em;
+    text-align: center;
+    line-height: 2em;
+    background-color:lawngreen;
+
+}
+
+.show-password-signup{
+    margin-left: 11.5em;
+}
+.btn-user-signup{
+    margin-top: 1em;
+}
+.btn-sign-up-message{
+    margin-left: 11.5em;
+    padding: 0.5em;
+    margin-top: 1.5em;
+    width: 15em;
+    background-color:darkgoldenrod;
+    border-radius: 10em;
+    border: 0;
+}    
+
+}
+
+@media only screen and (min-width: 600px) and (max-width:767px){
+    .sign-up-heading
+    {
+        margin-left: 10em;
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+.sign-up-account{
+    padding-bottom: 25em;
+    padding-top: 1em;
+}
+
+.sign-up-usr-acct-lbl{
+    display: block;
+    margin-left:14.5em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    text-transform: capitalize;
+    font-weight:500;
+    
+}
+
+.sign-up-acct-input{
+    margin-left: 15.5em;
+    width: 20em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 8em;
+    outline: none;
+}
+
+.btn-user-sign-up-submit{
+    margin-left: 15.5em;
+    padding: 0.5em;
+    margin-top: 2em;
+    width: 18em;
+    background-color: darkgoldenrod;
+    border-radius: 10em;
+}
+
+.usr-message{
+
+    margin-top: 2em;
+    height: 5em;
+    width: 22em;
+    margin-left: 47em;
+    text-align: center;
+    line-height: 2em;
+    background-color:lawngreen;
+
+}
+
+.show-password-signup{
+    margin-left: 15.5em;
+}
+.btn-user-signup{
+    margin-top: 1em;
+}
+.btn-sign-up-message{
+    margin-left: 15.5em;
+    padding: 0.5em;
+    margin-top: 1.5em;
+    width: 18em;
+    background-color:darkgoldenrod;
+    border-radius: 10em;
+}
+
+}
+
+@media only screen and (min-width: 768px) and (max-width:991px){
+    .sign-up-heading
+    {
+        margin-left: 10em;
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+.sign-up-account{
+    padding-bottom: 25em;
+    padding-top: 1em;
+}
+
+.sign-up-usr-acct-lbl{
+    display: block;
+    margin-left:14.5em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    text-transform: capitalize;
+    font-weight:500;
+    
+}
+
+.sign-up-acct-input{
+    margin-left: 15.5em;
+    width: 20em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 8em;
+    outline: none;
+}
+
+.btn-user-sign-up-submit{
+    margin-left: 15.5em;
+    padding: 0.5em;
+    margin-top: 2em;
+    width: 18em;
+    background-color: darkgoldenrod;
+    border-radius: 10em;
+}
+
+.usr-message{
+
+    margin-top: 2em;
+    height: 5em;
+    width: 22em;
+    margin-left: 47em;
+    text-align: center;
+    line-height: 2em;
+    background-color:lawngreen;
+
+}
+
+.show-password-signup{
+    margin-left: 15.5em;
+}
+.btn-user-signup{
+    margin-top: 1em;
+}
+.btn-sign-up-message{
+    margin-left: 15.5em;
+    padding: 0.5em;
+    margin-top: 1.5em;
+    width: 18em;
+    background-color:darkgoldenrod;
+    border-radius: 10em;
+}
+}
+
+@media only screen and (min-width: 992px) and (max-width:1199px) {
+    .sign-up-heading
+    {
+        margin-left: 20em;
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+.sign-up-account{
+    padding-bottom: 25em;
+    padding-top: 1em;
+}
+
+.sign-up-usr-acct-lbl{
+    display: block;
+    margin-left:30.5em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    text-transform: capitalize;
+    font-weight:500;
+    
+}
+
+.sign-up-acct-input{
+    margin-left: 30.5em;
+    width: 20em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 8em;
+    outline: none;
+}
+
+.btn-user-sign-up-submit{
+    margin-left: 31.5em;
+    padding: 0.5em;
+    margin-top: 2em;
+    width: 18em;
+    background-color: darkgoldenrod;
+    border-radius: 10em;
+}
+
+.usr-message{
+
+    margin-top: 2em;
+    height: 5em;
+    width: 22em;
+    margin-left: 47em;
+    text-align: center;
+    line-height: 2em;
+    background-color:lawngreen;
+
+}
+
+.show-password-signup{
+    margin-left: 31.5em;
+}
+.btn-user-signup{
+    margin-top: 1em;
+    
+}
+.btn-sign-up-message{
+    margin-left: 31.5em;
+    padding: 0.5em;
+    margin-top: 1.5em;
+    width: 18em;
+    background-color:darkgoldenrod;
+    border-radius: 10em;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+.sign-up-heading
+    {
+        margin-left: 25em;
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+.sign-up-account{
+    padding-bottom: 25em;
+    padding-top: 1em;
+}
+
+.sign-up-usr-acct-lbl{
+    display: block;
+    margin-left:37.5em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    text-transform: capitalize;
+    font-weight:500;
+    
+}
+
+.sign-up-acct-input{
+    margin-left: 37.5em;
+    width: 20em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 8em;
+    outline: none;
+}
+
+.btn-user-sign-up-submit{
+    margin-left: 38.5em;
+    padding: 0.5em;
+    margin-top: 2em;
+    width: 18em;
+    background-color: darkgoldenrod;
+    border-radius: 10em;
+}
+
+.usr-message{
+
+    margin-top: 2em;
+    height: 5em;
+    width: 22em;
+    margin-left: 47em;
+    text-align: center;
+    line-height: 2em;
+    background-color:lawngreen;
+
+}
+
+.show-password-signup{
+    margin-left: 39.5em;
+}
+.btn-user-signup{
+    margin-top: 1em;
+}
+.btn-sign-up-message{
+    margin-left: 38.5em;
+    padding: 0.5em;
+    margin-top: 1.5em;
+    width: 18em;
+    background-color:darkgoldenrod;
+    border-radius: 10em;
+}
+}

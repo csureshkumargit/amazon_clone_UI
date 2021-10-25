@@ -1,0 +1,46 @@
+.order-history-heading{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: serif;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.order-item-name,.order-item-qty{
+    font-size: 1.2em;
+    font-family: serif;
+    /* margin-top: 2em; */
+     
+}
+.order-item-name
+{
+    margin-bottom: 1em;
+}
+.order-item-price{
+    font-size: 1.2em;
+    font-family: serif;
+    
+}
+.ordered-date{
+    font-size: 1em;
+    font-weight: 600;
+    
+}
+
+@media only screen and (max-width:600px){
+    .ordered-date{
+        font-size: 1em;
+        margin-bottom: 0.8em;
+    }
+    .order-item-price{
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+    }
+    .order-item-qty{
+        font-size: 0.9em;
+    }
+    .order-item-name{
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+}

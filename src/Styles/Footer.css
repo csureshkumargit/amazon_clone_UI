@@ -1,0 +1,127 @@
+
+.footer-section-2{
+    width: 100%;
+    text-align: left;
+    background-color: #2a3447;
+    padding-right: 3%;
+}
+
+.footer-2{
+    
+    width: 20%;
+    display: inline-block;
+    color: white;
+    font-size: 0.9em;
+    font-family: ui-monospace;
+}
+.about{
+    margin-left:10%;
+}
+.connect{
+    vertical-align: top;
+}
+.make-money{
+    vertical-align: top;
+}
+
+.Help{
+    vertical-align: top;
+}
+li{
+    list-style-type: none;
+    padding: 2%;
+}
+hr{
+    color:white;
+}
+.footer-section-3{
+    background-color: #2a3447;
+    margin-top: -0.8%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    width: 100%;
+}
+.sub-footer-sec-3{
+        /* display: inline-block; */
+        width: 100%;
+}
+.logo-footer{
+    width:30%
+}
+.logo-sec{
+    display: inline-block;
+    width: 25%;
+    margin-left: 34%;
+}
+.lang-footer{
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    margin-top: 0.5%;
+    /* margin-right: 5%; */
+}
+.language{
+    width: 50%;
+}
+
+.amazon-countries{
+    color:white;
+    padding: 1%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8em;
+}
+.footer-amazon-countries{
+text-align: centre;
+margin-top: 3%;
+margin-left:40%;
+}
+.footer-section-4{
+    width: 100%;
+    background-color: black;
+    /* padding: 3%; */
+    padding-bottom: 1.5%;
+    padding-left: 3%;
+    padding-top: 3%;
+}
+.footer-4{
+    margin-left:21%;
+}
+
+.sub-footer-section-4{
+    color:white;
+    padding: 1%;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+@media only screen and (min-width: 768px) and (max-width:991px){
+    .sub-footer-section-4{
+        color:white;
+        padding: 1%;
+        text-align: center;
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width:767px){
+    .sub-footer-section-4{
+        color:white;
+        padding: 1%;
+        text-align: center;
+        font-size: 0.5em;
+    }
+    
+    
+}
+@media only screen and (max-width: 600px){
+.footer-section-2{
+    display: none;
+}
+.sub-footer-section-4{
+    color:white;
+    padding: 1%;
+    text-align: center;
+    font-size: 0.38em;
+}
+}

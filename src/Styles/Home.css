@@ -1,0 +1,52 @@
+
+.banner-img{
+    background-size: cover;
+    width: 100%;
+}
+
+.product-brands-icon{
+    width:100%;
+    height: 12em;
+    padding:2%;
+    cursor: pointer;
+}
+
+.product-brands-icon:hover{
+    background-color: skyblue;
+}
+
+
+.product-heading{
+    font-size: 3em;
+    margin-left: 5.7%;
+    padding-bottom: 3%;
+    font-family: serif;
+}
+
+@media only screen and (min-width: 768px) and (max-width:991px){
+    .product-heading{
+        font-size: 2.6em;
+        margin-left: 5.7%;
+        padding-bottom: 3%;
+        font-family: serif;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width:767px){
+    .product-heading{
+        font-size: 2.2em;
+        margin-left: 5.7%;
+        padding-bottom: 3%;
+        font-family: serif;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .product-heading{
+        font-size: 1.8em;
+        margin-left: 5.7%;
+        padding-bottom: 3%;
+        font-family: serif;
+    }
+}
+

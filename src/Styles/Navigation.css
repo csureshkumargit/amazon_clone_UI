@@ -1,0 +1,555 @@
+.login-model{
+    top: 50%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+}
+
+.Navigation{
+    width: 100%;
+    background-color: black;
+    display: inline-block;
+    padding-left: 3%;
+   
+}
+
+.amazon-logo{
+    width: 10%;
+    display: inline-block;
+    background-color: black;
+    margin-top: 0.6%;
+    cursor: pointer;
+}
+.logo{
+    width: 100%;
+}
+.logo-flag{
+    padding: 10%;
+    width: 40%;
+}
+.customer-location{
+    width: 9%;
+    display: inline-block;
+    background-color: black;
+    vertical-align: top;
+    margin-top: 0.9%;
+    margin-left: 0.4%;
+}
+.location-cust{
+    display: inline-block;
+    color: white;
+}
+.deliver-tag-cust{
+    color: white;
+    font-size: 0.8em;
+    padding: 0.5em;
+    display: inline-block;
+
+}
+.search-bar-product{
+    width: 45%;
+    display: inline-block;
+    background-color: #d6972b;
+    vertical-align: top;
+    margin-top: 0.8%;
+}
+.product-search{
+    width: 92%;
+    height: 2em;
+    border-radius: 0.4em;
+    outline: none;
+    border: none;
+}
+.search-prod{
+    color:black;
+    padding: 2.5%;
+}
+.Language-dropdown{
+    width: 5%;
+    display: inline-block;
+    background-color: black;
+    vertical-align: top;
+    margin-top: 0.8%;
+}
+.lang-icon{
+    color: white;
+}
+.cust-login-icon{
+    color: white;
+    font-weight: bolder;
+    font-size:larger
+}
+.Customer-Login{
+    width: 12%;
+    display: inline-block;
+    background-color: black;
+    vertical-align: top;
+    color: white;
+    background-color: black;
+    margin-top: 1.1%;
+    font-size: 0.9em;
+}
+.Customer-Orders{
+    width: 8%;
+    display: inline-block;
+    background-color:black;
+    vertical-align: top;
+    margin-top:0.9%;
+    cursor: pointer;
+}
+.Customer-Cart{
+    width: 8%;
+    display: inline-block;
+    background-color: black;
+    vertical-align: top;
+    margin-top:1.2%;
+    cursor: pointer;
+}
+
+
+.Navigation-items{
+width: 100%;
+background-color:black;
+padding-left:3%;
+padding-bottom: 0.5%;
+}
+
+.btn-item-navigation{
+background-color: black;
+color: white;
+font-size: 0.8em;
+font-family: sans-serif;
+padding: 0.5%;
+padding-bottom:0.3%;
+width: 14.2%;
+border: 0;
+outline: none;
+cursor: pointer;
+}
+
+.btn-item-navigation:hover{
+    color: white;
+/* background-color: white; */
+border: 1px solid white;
+
+}
+
+.btn-cust-service{
+    width: 11.1%;
+}
+.btn-home-kitchen{
+    width: 11.9%;
+}
+.btn-festival{
+    width: 14%;
+}
+
+.btn-acct-signin{
+width: 30%;
+text-align: center;
+margin-left: 35%;
+border-radius: 0.8em;
+font-size: 1em;
+background-color: darkgoldenrod;
+outline: none;
+border: 0;
+}
+
+.user-acct-creation{
+margin-top: 2%;
+font-size: 0.8em;
+text-align: center;
+}
+
+.btn-acct-signup{
+    background-color: white;
+    border: 0;
+    color: blue;
+    padding-left: 2%;
+}
+.btn-acct-user-order-history{
+background-color: white;
+border: 0;
+color: blue;
+margin-left: 65%;
+/* padding-left: 2%; */
+font-size: 0.9em;
+color: blue;
+}
+
+.sign-in-modal-close{
+    margin-left: 4em;
+}
+
+/* .courier-partner-heading{
+    padding-right: 2em;
+} */
+/* .courier-partner-detail{
+    padding: 0.2em;
+    padding-left:0em;
+} */
+.customer-care-number{
+text-align: center;
+font-size: 1em;
+font-weight: bold;
+}
+/* .customer-care-courier{
+    margin-top: 2em;
+} */
+.customer-care-modal-close{
+    margin-left:95%;
+}
+
+.mpadNavigation{
+    display: none;
+}
+.mpadNavigation-items{
+    display: none;
+}
+@media only screen and (min-width: 768px) and (max-width:991px){
+    .amazon-logo{
+        width: 9%;
+       
+    }
+    
+    .customer-location {
+      
+        font-size: 0.8em;
+        width:12%;
+    }
+    .Customer-Login{
+  
+    font-size: 0.8em;
+    }
+    .Customer-Orders {
+       
+        font-size: 0.8em;
+    }
+    .product-search{
+        width: 90%;
+    }
+
+    .search-bar-product {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width:767px){
+    .Navigation{
+        display: none;
+
+    }
+    
+    .mpadNavigation{
+        width: 100%;
+        background-color: black;
+    display: inline-block;
+    padding-left: 3%;
+    padding-bottom: 1%;
+    }
+    .toggle-products{
+        width: 5%;
+        display: inline-block;
+        background-color: black;
+        margin-top: 0.6%;
+        cursor: pointer;
+    }
+    .toggle{
+        color:white;
+        text-align: center;
+    }
+    .amazon-logo{
+        width: 15%;
+        display: inline-block;
+        background-color: black;
+        margin-top: 0.6%;
+        cursor: pointer;
+    }
+    .logo{
+        width: 100%;
+    }
+    .logo-flag{
+        padding: 10%;
+        width: 40%;
+    }
+    .customer-location{
+        width: 8%;
+        display: inline-block;
+        background-color: black;
+        vertical-align: top;
+        margin-top: 0.8%;
+        font-size: 0.8em;
+    }
+    .location-cust{
+        display: inline-block;
+        color: white;
+    }
+    .deliver-tag-cust{
+        color: white;
+        font-size: 0.8em;
+        padding: 0.5em;
+        display: inline-block;
+    
+    }
+    .search-bar-product{
+        width: 60%;
+        display: inline-block;
+        background-color: #d6972b;
+        vertical-align: top;
+        margin-top: 0.8%;
+        margin-left: 0.5em;
+    }
+    .product-search{
+        width: 90%;
+        height: 2em;
+        border-radius: 0.4em;
+        outline: none;
+        border: none;
+    }
+    .search-prod{    color: black;
+        padding: 2.5%;
+        /* margin-left: 17em; */
+        /* margin-bottom: 2em; */
+        position: absolute;
+        margin-top: -0.6em;
+        margin-left: -0.5em;
+        
+    }
+    .Language-dropdown{
+        width: 5%;
+        display: inline-block;
+        background-color: black;
+        vertical-align: top;
+        margin-top: 0.8%;
+    }
+    .lang-icon{
+        color: white;
+    }
+    .cust-login-icon{
+        color: white;
+        font-weight: bolder;
+        font-size:larger
+    }
+    .Customer-Login{
+        width: 14%;
+        display: inline-block;
+        background-color: black;
+        vertical-align: top;
+        color: white;
+        background-color: black;
+        margin-top: 1.1%;
+        font-size: 0.7em;
+        margin-left:1%;
+    }
+    .Customer-Orders{
+        width: 8%;
+        display: inline-block;
+        background-color:black;
+        vertical-align: top;
+        margin-top:0.9%;
+        cursor: pointer;
+    }
+    .Customer-Cart{
+        width: 8%;
+        display: inline-block;
+        background-color: black;
+        vertical-align: top;
+        margin-top:1.2%;
+        cursor: pointer;
+    }
+    .Navigation-items{
+        display: none;
+    }
+    .mpadNavigation-items{
+        width: 30%;
+        background-color:black;
+        padding-left:3%;
+        padding-bottom: 0.5%;
+        display: none;
+        position: absolute;
+        z-index: 2;
+        }
+        .btn-item-navigation{
+            background-color: black;
+            color: white;
+            font-size: 0.8em;
+            font-family: sans-serif;
+            padding: 0.5%;
+            padding-bottom: 0.3%;
+            width: 100%;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            display: block;
+            margin-bottom: 1.5em;
+            font-family: ui-serif;
+
+            }
+            .btn-item-navigation:hover{
+                color: black;
+            background-color: white
+        
+            
+            }
+}
+
+@media only screen and (max-width:600px){
+    .Navigation{
+        display: none;
+
+    }
+    
+    .mpadNavigation{
+        width: 100%;
+        background-color: black;
+    display: inline-block;
+    padding-left: 3%;
+    padding-bottom: 1%;
+    }
+    .toggle-products{
+        width: 6%;
+        display: inline-block;
+        background-color: black;
+        margin-top: 0.6%;
+        cursor: pointer;
+    }
+    .toggle{
+        color:white;
+        text-align: center;
+    }
+    .amazon-logo{
+        width: 8%;
+        display: inline-block;
+        background-color: black;
+        margin-top: 0.6%;
+        cursor: pointer;
+    }
+    .logo{
+        width: 100%;
+    }
+    .logo-flag{
+        padding: 10%;
+        width: 40%;
+    }
+    .customer-location{
+        width: 8%;
+        display: inline-block;
+        background-color: black;
+        vertical-align: top;
+        margin-top: 0.8%;
+        font-size: 0.8em;
+    }
+    .location-cust{
+        display: inline-block;
+        color: white;
+    }
+    .deliver-tag-cust{
+        color: white;
+        font-size: 0.8em;
+        padding: 0.5em;
+        display: inline-block;
+    
+    }
+    .search-bar-product{
+        width: 58%;
+        display: inline-block;
+        background-color: #d6972b;
+        vertical-align: top;
+        margin-top: 0.8%;
+        margin-left: 0.5em;
+    }
+    .product-search{
+        width: 90%;
+        height: 2em;
+        border-radius: 0.4em;
+        outline: none;
+        border: none;
+    }
+    .search-prod{    color: black;
+        padding: 2.5%;
+        /* margin-left: 17em; */
+        /* margin-bottom: 2em; */
+        position: absolute;
+        margin-top: -0.6em;
+        margin-left: -0.5em;
+        
+    }
+    .Language-dropdown{
+        width: 5%;
+        display: inline-block;
+        background-color: black;
+        vertical-align: top;
+        margin-top: 0.8%;
+    }
+    .lang-icon{
+        color: white;
+    }
+    .cust-login-icon{
+        color: white;
+        font-weight: bolder;
+        font-size:larger
+    }
+    .Customer-Login{
+        width: 20%;
+        display: inline-block;
+        background-color: black;
+        vertical-align: top;
+        color: white;
+        background-color: black;
+        margin-top: 1.1%;
+        font-size: 0.7em;
+        margin-left:1%;
+    }
+    .Customer-Orders{
+        width: 8%;
+        display: inline-block;
+        background-color:black;
+        vertical-align: top;
+        margin-top:0.9%;
+        cursor: pointer;
+    }
+    .Customer-Cart{
+        width: 8%;
+        display: inline-block;
+        background-color: black;
+        vertical-align: top;
+        margin-top:1.2%;
+        cursor: pointer;
+    }
+    .Navigation-items{
+        display: none;
+    }
+    .mpadNavigation-items{
+        width: 30%;
+        background-color:black;
+        padding-left:3%;
+        padding-bottom: 0.5%;
+        display: none;
+        position: absolute;
+        z-index: 2;
+        }
+        .btn-item-navigation{
+            background-color: black;
+            color: white;
+            font-size: 0.8em;
+            font-family: sans-serif;
+            padding: 0.5%;
+            padding-bottom: 0.3%;
+            width: 100%;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            display: block;
+            margin-bottom: 1.5em;
+            font-family: ui-serif;
+
+            }
+            .btn-item-navigation:hover{
+                color: black;
+            background-color: white
+        
+            
+            }
+}

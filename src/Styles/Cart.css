@@ -1,0 +1,121 @@
+.user-login-alert{
+    font-size: 0.9em;
+}
+.item-image-cart>img{
+    width: 100%;
+    height: 13em;
+}
+.cart-item-split{
+    margin-top:1%;
+}
+.item-cart-name{
+    font-size: 0.9em;
+    font-weight: bold;
+    font-family: serif;
+    margin-left: 1%;
+}
+.cart-avg-rating{
+    font-size: 0.9em;
+    font-family: serif;
+    margin-left: 1%;
+}
+.cart-prime-item>img{
+    width: 10%;
+    margin-left: 1%;
+}
+
+.cart-prime-desc{
+    font-size: 0.9em;
+    font-weight: lighter;
+    font-family: serif;
+    margin-left: 1%;
+}
+
+.cart-order-placed-verbiage{
+    font-size: 0.9em;
+    font-weight: lighter;
+    font-family: serif;
+    margin-left: 1%;
+}
+
+.cart-order-delivery-verbiage{
+    font-size: 0.9em;
+    font-weight: lighter;
+    font-family: serif;
+    margin-left: 1%;
+}
+
+
+.btn-cart-item{
+    width: 15%;
+    height: 1.8em;
+    text-align: center;
+    background: lightskyblue;
+    border-radius: 2em;
+    outline: none;
+    border: 0;
+    font-size: 0.9em;
+    margin-top:1%;
+}
+.cart-item-qty{
+width: 8%;
+height: 2.5em;
+border-radius: 100%;
+background: lightskyblue;
+margin-top:1%;
+}
+.cart-footer{
+    width: 100%;
+}
+.cart-footer-total-price-qty{
+    margin-left:72%;
+}
+.cart-sub-total{
+    font-size: 1.2em;
+    font-weight: lighter;
+    font-family: sans-serif;
+}
+
+.cart-total-amt{
+    
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.cart-total-price-qty-buy{
+    margin-top: 40%;
+    margin-left: 7%;
+}
+
+.cart-buy-btn{
+width: 90%;
+height: 3em;
+text-align: center;
+background: goldenrod;
+border-radius: 2em;
+outline: none;
+border: 0;
+font-size: 0.9em;
+margin-top: 6%;
+}
+
+@media only screen and (min-width: 600px) and (max-width:767px){
+    .cart-footer-total-price-qty {
+        margin-left: 40%;
+    }
+}
+@media only screen and (max-width: 600px){
+.btn-cart-item {
+    width: 40%;
+    }
+    .cart-item-qty {
+        width: 10%;
+            }
+            .cart-footer-total-price-qty {
+                margin-left: 2%;
+            }
+            .cart-sub-total {
+                font-size: 1em;
+            }
+}

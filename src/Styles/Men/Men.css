@@ -1,0 +1,48 @@
+
+
+.men-brands-icon{
+    width:100%;
+    height: 12em;
+    padding:2%;
+    cursor: pointer;
+}
+
+.men-brands-icon:hover{
+    background-color: skyblue;
+}
+
+
+.men-heading{
+    font-size: 3em;
+    margin-left: 5.7%;
+    padding-bottom: 3%;
+    font-family: serif;
+}
+
+.rec-pagination{
+    display:none;
+}
+.legend{
+    font-size: 2em;
+    font-family: serif;
+}
+@media only screen and (min-width: 768px) and (max-width:991px){
+    .men-heading{
+        font-size:2em;
+        
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width:767px){
+    .men-heading{
+        font-size:2em;
+        
+    }
+}
+
+@media only screen and (max-width:600px){
+    .men-heading{
+        font-size:1.8em;
+        text-align: center;
+    }
+}

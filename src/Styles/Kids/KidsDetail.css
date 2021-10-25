@@ -1,0 +1,165 @@
+.kids-item-name{
+    font-size: 1.8em;
+    font-family: sans-serif;
+    color: black;
+}
+.kids-item-brand-url>a{
+    font-size: 1em;
+    text-decoration: none;
+    color: rgb(25, 95, 226);
+}
+.kids-item-rating{
+    font-size: 1em;
+    color: rgb(25, 95, 226);
+}
+.kids-item-amazon-choice{
+    width:15%;
+}
+.kids-item-amazon-limited-deal{
+    width: 15%;
+}
+.kids-item-price{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+    font-weight: bolder;
+}
+
+.kids-item-has-prime>img{
+    width:12%
+}
+
+.order-placed-verbiage{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+}
+.availabile-size{
+    background-color: skyblue;;
+    padding:1%;
+    margin-top:2%;
+    margin-right:2%
+}
+
+.cart-buy{
+    margin-top: 25em;
+    margin-left: 2%;
+}
+
+.btn-cart{
+    width: 95%;
+    height: 3em;
+    color: white;
+    background-color: royalblue;
+    border-radius: 2em;
+    outline: none;
+    padding: 2%;
+    margin-top: 2%;
+    border: 0;
+}
+
+.btn-buy{
+    width: 95%;
+    height: 3em;
+    color: white;
+    background-color:green;
+    border-radius: 2em;
+    outline: none;
+    padding: 2%;
+    margin-top: 2%;
+    border: 0;
+}
+
+.kids-cart-buy{
+    background-color: lightslategrey;
+}
+.btn-view-cart-item{
+color: white;
+margin-left: 31%;
+width: 40%;
+background-color: deepskyblue;
+border-radius: 0.5em;
+height: 2em;
+font-family: ui-sans-serif;
+font-size: 1.1em;
+margin-top:4%
+}
+.cart-pop-header{
+    text-align: center;
+    font-size: 1.0em;
+    font-family: cursive;
+    margin-left: 20%;
+    padding: 2%;
+    padding-bottom: 3%;
+}
+.add-to-cart-modal-close{
+    margin-left: 7%;
+}
+
+@media only screen and (min-width: 600px) and (max-width:767px){
+
+    .kids-item-name{
+        font-size: 1.4em;
+        font-family: sans-serif;
+        color: black;
+    }
+    .btn-cart{
+        width: 95%;
+        height: 3em;
+        color: white;
+        background-color: royalblue;
+        border-radius: 2em;
+        outline: none;
+        padding: 2%;
+        margin-top: 3%;
+        font-size: 0.8em;
+    }
+    
+    .btn-buy{
+        width: 95%;
+        height: 3em;
+        color: white;
+        background-color:green;
+        border-radius: 2em;
+        outline: none;
+        padding: 2%;
+        margin-top: 3%;
+        font-size: 0.8em;
+    }
+    }
+    
+    @media only screen and (max-width:600px){
+        .kids-item-name{
+            font-size: 1.4em;
+            font-family: sans-serif;
+            color: black;
+        }
+        .cart-buy{
+            margin-top: 1em;
+            margin-left: 2%;
+        }
+        .btn-cart{
+            width: 50%;
+            height: 3em;
+            color: white;
+            background-color: royalblue;
+            border-radius: 2em;
+            outline: none;
+            padding: 2%;
+            margin-top: 3%;
+            font-size: 0.8em;
+            margin-left:25%;
+        }
+        
+        .btn-buy{
+            width: 50%;
+            height: 3em;
+            color: white;
+            background-color:green;
+            border-radius: 2em;
+            outline: none;
+            padding: 2%;
+            margin-top: 3%;
+            font-size: 0.8em;
+            margin-left:25%;
+        }
+    }
+    
