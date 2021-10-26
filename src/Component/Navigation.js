@@ -204,8 +204,9 @@ class Navigation extends react.Component {
                         <img className='logo' src={`./Assets/Images/Logo/Amazon-India-Logo.png`} />
                     </div>
                     <div className="search-bar-product">
-                        <input className="product-search" type="text" placeholder="Search for Product"></input>
-                        <strong class="fas fa-search search-prod"></strong>
+                        <input className="product-search" type="text" placeholder="Search for Product" value={searchproductword}
+                            onChange={(e) => this.setState({ searchproductword: e.target.value })}></input>
+                        <strong class="fas fa-search search-prod" onClick={this.navigateToSearchProduct}></strong>
                     </div>
                     <div className="Customer-Login" onClick={() => this.handleModal('modalIsOpenforLogin', true)}>
                         Hello , Sign in &nbsp;
