@@ -22,12 +22,13 @@
 
 
 .btn-user-signup{
-    margin-top: 1em;
+    margin-top: 2em;
 }
 .btn-sign-in-message{
     padding: 0.5em;
     background-color:darkgoldenrod;
     border-radius: 10em;
+margin-top: 2em;
 }
 
 .user-sign-in-up{
