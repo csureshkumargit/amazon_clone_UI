@@ -57,7 +57,7 @@ class Login extends react.Component {
         console.log('info', userinfo);
         axios(
             {
-                url: "https://amazon-clone-db.herokuapp.com/api/user/Login",
+                url: "http://localhost:2021/api/user/Login",
                 Headers: {
                     'content-type': 'application/json'
                 },
@@ -83,27 +83,27 @@ class Login extends react.Component {
             <div className='user-account-container'>
                 <h5 className="sign-in-heading"> Please ,Sign in your information </h5>
                 <form className='user-account' onSubmit={this.checkUserLogin}>
-                    <div>
-                        <label className='usr-acct-lbl'>Email :</label>
-                        <input type='email' placeholder='Enter your email' required value={email}
+                    <div className="col-10 col-sm-6 col-md-6 col-lg-6 col-xl-4 user-sign-in-up row">
+                        <label className="form-label">Email:</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder='Enter your email' required value={email}
                             onChange={(e) => this.setState({ email: e.target.value, usrMsg: undefined })} pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                            minLength='6' className='usr-acct-input'></input>
+                            minLength='6' />
                     </div>
-                    <div>
-                        <label className='usr-acct-lbl'>Password :</label>
-                        <input className='usr-acct-input' type='password' placeholder='Enter your password' required value={password}
+                    <div className="col-10 col-sm-6 col-md-6 col-lg-6 col-xl-4 user-sign-in-up row">
+                        <label for="exampleFormControlTextarea1" className="form-label">Password :</label>
+                        <input type="password" className="form-control" placeholder='Enter your password' required value={password}
                             onChange={(e) => this.setState({ password: e.target.value, usrMsg: undefined })}
                             id='password'
                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
-                            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 6 or more characters"></input>
-                        <div>
-                            <input type='checkbox' className='show-password-signup' onClick={this.showPassword}></input>Show Password
-                        </div>
-
+                            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 6 or 
+                            more characters"/>
                     </div>
                     <div>
-                        <button className='btn-user-submit' type='submit' >Login</button> <button className='btn-user-submit btn-user-signup' type='button' onClick={this.navigateToSignupPage} >Create Account</button>
-                        {usrMsg && <button className="btn-sign-in-message" type="button" onClick={this.navigateToHomeorOrderPage}>{usrMsg.includes('been') ? "Logged in !!!.Please click to continue." : usrMsg}</button>}
+                        <input type='checkbox' className='show-password-signup user-sign-in-up' onClick={this.showPassword}></input>Show Password
+                    </div>
+                    <div className="col-10 col-sm-6 col-md-6 col-lg-6 col-xl-4 user-sign-in-up row">
+                        <button className='btn-user-submit form-control' type='submit' >Login</button> <button className='btn-user-submit btn-user-signup form-control' type='button' onClick={this.navigateToSignupPage} >Create Account</button>
+                        {usrMsg && <button className="btn-sign-in-message form-control" type="button" onClick={this.navigateToHomeorOrderPage}>{usrMsg.includes('been') ? "Logged in !!!.Please click to continue." : usrMsg}</button>}
                     </div>
                 </form>
             </div >
