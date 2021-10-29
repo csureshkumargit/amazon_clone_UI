@@ -37,7 +37,7 @@ class Signup extends react.Component {
         console.log('info', userinfo);
         axios(
             {
-                url: "http://localhost:2021/api/user/Register",
+                url: "https://amazon-clone-db.herokuapp.com/api/user/Register",
                 Headers: {
                     'content-type': 'application/json'
                 },
