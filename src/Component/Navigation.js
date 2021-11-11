@@ -82,7 +82,7 @@ class Navigation extends react.Component {
     navigateToSearchProduct = () => {
         const { searchproductword } = this.state;
         if (searchproductword && searchproductword.length > 1) {
-            this.props.history.push(`searchproduct?searchproductword=${searchproductword}`);
+            this.props.history.push(`/searchproduct?searchproductword=${searchproductword}`);
         }
         return;
     }
