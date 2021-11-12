@@ -50,16 +50,18 @@ class Payment extends react.Component {
     }
 
     post = (details) => {
+
         const form = this.buildForm(details);
         document.body.appendChild(form);
         form.submit();
         form.remove();
         this.saveUserOrders();
+        this.removeUserTempOrders();
 
 
     }
     getData = (data_pay) => {
-        return fetch(`https://amazon-clone-db.herokuapp.com/api/payment`, {
+        return fetch(`http://localhost:2021/api/payment`, {
             method: "POST",
             headers: {
                 Accept: "application/json",
@@ -67,9 +69,23 @@ class Payment extends react.Component {
             },
 
             body: JSON.stringify(data_pay)
-        }).then(response =>
-            response.json()).catch(err => console.log(err))
-
+        }).then(response => response.json()).catch(err => console.log(err))
+    }
+    removeUserTempOrders = () => {
+        let username;
+        if (sessionStorage.getItem('username') && sessionStorage.getItem('username').length > 0) {
+            username = sessionStorage.getItem('username');
+            axios(
+                {
+                    url: `http://localhost:2021/api/tempOrders/${username}`,
+                    Headers: {
+                        'content-type': 'application/json'
+                    },
+                    method: "DELETE"
+                }
+            ).then(res => console.log('del_orders', res.data.message))
+                .catch(err => console.log('err', err))
+        }
     }
     saveUserOrders = () => {
         let items = [];
@@ -85,7 +101,7 @@ class Payment extends react.Component {
             }
             axios(
                 {
-                    url: "https://amazon-clone-db.herokuapp.com/api/orders",
+                    url: "http://localhost:2021/api/orders",
                     Headers: {
                         'content-type': 'application/json'
                     },
@@ -105,7 +121,7 @@ class Payment extends react.Component {
             amount: subtotal,
             email
         };
-
+        console.log('payobj', paymentObj);
         this.getData(paymentObj).then(response => {
             console.log('resp', response);
             var information = {

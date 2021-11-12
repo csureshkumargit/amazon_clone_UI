@@ -26,14 +26,76 @@ class Login extends react.Component {
         }
 
     }
+    saveUsertempOrders = () => {
+        let items = [];
+        let username = undefined;
+
+        items = JSON.parse(sessionStorage.getItem('user_cart'));
+        username = sessionStorage.getItem('username');
+        const order = {
+            items,
+            username
+        }
+        axios(
+            {
+                url: `http://localhost:2021/api/tempOrders/${username}`,
+                Headers: {
+                    'content-type': 'application/json'
+                },
+                method: "DELETE"
+            }
+        ).then(res => console.log('del_orders', res.data.message))
+            .catch(err => console.log('err', err))
+        axios(
+            {
+                url: "http://localhost:2021/api/tempOrders",
+                Headers: {
+                    'content-type': 'application/json'
+                },
+                method: "POST",
+                data: order
+            }
+        ).then(res => console.log('orders', res.data.message))
+            .catch(err => console.log('err', err))
+
+    }
+
     navigateToHomeorOrderPage = () => {
         if (sessionStorage.getItem('user_cart') && sessionStorage.getItem('username') &&
             sessionStorage.getItem('jwt_token') && sessionStorage.getItem('user_cart').length > 0 &&
             sessionStorage.getItem('username').length > 0 && sessionStorage.getItem('jwt_token').length > 0) {
+            this.saveUsertempOrders();
             this.props.history.push('/payment');
         }
+        else if (!sessionStorage.getItem('user_cart') && sessionStorage.getItem('username') &&
+            sessionStorage.getItem('jwt_token') &&
+            sessionStorage.getItem('username').length > 0 && sessionStorage.getItem('jwt_token').length > 0) {
+            let username = undefined;
+            let user_temp_cart_items = [];
+            username = sessionStorage.getItem('username');
+            axios(
+                {
+                    url: `http://localhost:2021/api/tempOrders/${username}`,
+                    Headers: {
+                        'content-type': 'application/json'
+                    },
+                    method: "GET"
+                }
+            ).then(res => {
+                console.log('del_orders', res.data.message, res.data.user_temp_order.items);
+                if (res.data.user_temp_order && res.data.user_temp_order.items && res.data.user_temp_order.items.length > 0) {
+                    user_temp_cart_items = res.data.user_temp_order.items;
+                    sessionStorage.setItem('user_cart', JSON.stringify(user_temp_cart_items));
+                }
+
+            })
+                .catch(err => console.log('err', err))
+            this.props.history.push('/');
+        }
+
         else {
             this.props.history.push('/');
+
         }
     }
     saveUserLoggedInfo = () => {
@@ -57,7 +119,7 @@ class Login extends react.Component {
         console.log('info', userinfo);
         axios(
             {
-                url: "https://amazon-clone-db.herokuapp.com/api/user/Login",
+                url: "http://localhost:2021/api/user/Login",
                 Headers: {
                     'content-type': 'application/json'
                 },

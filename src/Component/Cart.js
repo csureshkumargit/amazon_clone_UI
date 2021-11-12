@@ -2,6 +2,7 @@ import react from "react";
 import { Component } from "react";
 import Modal from 'react-modal';
 import '../Styles/Cart.css';
+import axios from "axios";
 const customStyles = {
     content: {
         top: '50%',
@@ -45,6 +46,40 @@ class Cart extends react.Component {
     handlemodal = (state, value) => {
         this.setState({ [state]: value });
     }
+    saveUsertempOrders = () => {
+        let items = [];
+        let username = undefined;
+
+        items = JSON.parse(sessionStorage.getItem('user_cart'));
+        username = sessionStorage.getItem('username');
+        const order = {
+            items,
+            username
+        }
+        axios(
+            {
+                url: `http://localhost:2021/api/tempOrders/${username}`,
+                Headers: {
+                    'content-type': 'application/json'
+                },
+                method: "DELETE"
+            }
+        ).then(res => console.log('del_orders', res.data.message))
+            .catch(err => console.log('err', err))
+        axios(
+            {
+                url: "http://localhost:2021/api/tempOrders",
+                Headers: {
+                    'content-type': 'application/json'
+                },
+                method: "POST",
+                data: order
+            }
+        ).then(res => console.log('orders', res.data.message))
+            .catch(err => console.log('err', err))
+
+    }
+
     updateCartItems = (operation, index) => {
         const { cart_items } = this.state;
         let total_num_items = 0;
@@ -74,14 +109,20 @@ class Cart extends react.Component {
         })
         this.setState({ cart_items: update_result_cart_items, total_items: total_num_items, subtotal: subtotal_amt });
         sessionStorage.setItem('user_cart', JSON.stringify(update_result_cart_items));
+        if (sessionStorage.getItem('user_cart') && sessionStorage.getItem('user_cart').length > 0 &&
+            sessionStorage.getItem('username') && sessionStorage.getItem('username').length > 0) {
+            this.saveUsertempOrders();
+        }
 
     }
 
 
 
-
     componentDidMount() {
-
+        if (sessionStorage.getItem('user_cart') && sessionStorage.getItem('user_cart').length > 0 &&
+            sessionStorage.getItem('username') && sessionStorage.getItem('username').length > 0) {
+            this.saveUsertempOrders();
+        }
         if (sessionStorage.getItem('user_cart') && sessionStorage.getItem('user_cart').length > 0) {
             let user_cart_items = [];
             let total_num_items = 0;
