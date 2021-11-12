@@ -204,7 +204,8 @@ class Cart extends react.Component {
                         <div className="col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="cart-total-price-qty-buy">
                                 <span className="cart-sub-total-buy">Subtotal ({this.state.total_items} items)</span>: <span className="cart-total-amt">&#8377;{this.state.subtotal.toFixed(2)}</span>
-                                <div><button className="cart-buy-btn" onClick={this.navigateToHomeorOrderPage}>Proceed to Buy</button></div>
+                                {this.state.subtotal > 0 ? <div><button className="cart-buy-btn" onClick={this.navigateToHomeorOrderPage}>Proceed to Buy</button></div> :
+                                    <div><button className="cart-buy-btn" onClick={this.navigateToHomeorOrderPage} disabled >Proceed to Buy</button></div>}
                             </div>
                         </div>
                     </div>
