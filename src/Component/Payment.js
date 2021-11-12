@@ -61,7 +61,7 @@ class Payment extends react.Component {
 
     }
     getData = (data_pay) => {
-        return fetch(`http://localhost:2021/api/payment`, {
+        return fetch(`https://amazon-clone-db.herokuapp.com/api/payment`, {
             method: "POST",
             headers: {
                 Accept: "application/json",
@@ -77,7 +77,7 @@ class Payment extends react.Component {
             username = sessionStorage.getItem('username');
             axios(
                 {
-                    url: `http://localhost:2021/api/tempOrders/${username}`,
+                    url: `https://amazon-clone-db.herokuapp.com/api/tempOrders/${username}`,
                     Headers: {
                         'content-type': 'application/json'
                     },
@@ -101,7 +101,7 @@ class Payment extends react.Component {
             }
             axios(
                 {
-                    url: "http://localhost:2021/api/orders",
+                    url: "https://amazon-clone-db.herokuapp.com/api/orders",
                     Headers: {
                         'content-type': 'application/json'
                     },

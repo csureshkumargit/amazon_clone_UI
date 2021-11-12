@@ -38,7 +38,7 @@ class Login extends react.Component {
         }
         axios(
             {
-                url: `http://localhost:2021/api/tempOrders/${username}`,
+                url: `https://amazon-clone-db.herokuapp.com/api/tempOrders/${username}`,
                 Headers: {
                     'content-type': 'application/json'
                 },
@@ -48,7 +48,7 @@ class Login extends react.Component {
             .catch(err => console.log('err', err))
         axios(
             {
-                url: "http://localhost:2021/api/tempOrders",
+                url: "https://amazon-clone-db.herokuapp.com/api/tempOrders",
                 Headers: {
                     'content-type': 'application/json'
                 },
@@ -75,7 +75,7 @@ class Login extends react.Component {
             username = sessionStorage.getItem('username');
             axios(
                 {
-                    url: `http://localhost:2021/api/tempOrders/${username}`,
+                    url: `https://amazon-clone-db.herokuapp.com/api/tempOrders/${username}`,
                     Headers: {
                         'content-type': 'application/json'
                     },
@@ -119,7 +119,7 @@ class Login extends react.Component {
         console.log('info', userinfo);
         axios(
             {
-                url: "http://localhost:2021/api/user/Login",
+                url: "https://amazon-clone-db.herokuapp.com/api/user/Login",
                 Headers: {
                     'content-type': 'application/json'
                 },

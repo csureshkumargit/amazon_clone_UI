@@ -58,7 +58,7 @@ class Cart extends react.Component {
         }
         axios(
             {
-                url: `http://localhost:2021/api/tempOrders/${username}`,
+                url: `https://amazon-clone-db.herokuapp.com/api/tempOrders/${username}`,
                 Headers: {
                     'content-type': 'application/json'
                 },
@@ -68,7 +68,7 @@ class Cart extends react.Component {
             .catch(err => console.log('err', err))
         axios(
             {
-                url: "http://localhost:2021/api/tempOrders",
+                url: "https://amazon-clone-db.herokuapp.com/api/tempOrders",
                 Headers: {
                     'content-type': 'application/json'
                 },
