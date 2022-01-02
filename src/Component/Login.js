@@ -120,7 +120,7 @@ class Login extends react.Component {
         axios(
             {
                 url: "https://amazon-clone-db.herokuapp.com/api/user/Login",
-                Headers: {
+                headers: {
                     'content-type': 'application/json'
                 },
                 method: "POST",
