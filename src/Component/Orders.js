@@ -14,7 +14,7 @@ class Orders extends react.Component {
         console.log('usr', username);
         axios({
             url: `https://amazon-clone-db.herokuapp.com/api/orders/${username}`,
-            Headers: {
+            headers: {
                 'content-type': 'application/json'
             },
             method: 'GET'

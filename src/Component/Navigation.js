@@ -149,6 +149,18 @@ class Navigation extends react.Component {
         this.handleModal('modalIsOpenforCustomerCare', true);
     }
     userLogOut = () => {
+	axios(
+            {
+                url: "https://amazon-clone-db.herokuapp.com/api/user/Logout",
+                headers: {
+                    'content-type': 'application/json'
+                },
+                method: "GET"
+            }
+        ).then(res => {
+            console.log(res);
+        })
+            .catch(err => console.log('err', err))
         if (sessionStorage.getItem('username') && sessionStorage.getItem('username').length > 0) {
             sessionStorage.setItem('user_cart', '');
             sessionStorage.setItem('jwt_token', '');
