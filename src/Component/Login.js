@@ -120,17 +120,21 @@ class Login extends react.Component {
         axios(
             {
                 url: "https://amazon-clone-db.herokuapp.com/api/user/Login",
+
                 headers: {
-                    'content-type': 'application/json'
+                    'content-type': 'application/json',
+                    withCredentials: true
                 },
                 method: "POST",
-                data: userinfo
+                data: userinfo,
+
             }
         ).then(res => {
             if (res.data.isAuthenticated)
                 this.setState({ usrMsg: res.data.message, username: res.data.username, jwt_token: res.data.jwt });
             else
                 this.setState({ usrMsg: res.data.message });
+            console.log('res', res);
         })
             .catch(err => console.log('err', err))
         setTimeout(() => {
