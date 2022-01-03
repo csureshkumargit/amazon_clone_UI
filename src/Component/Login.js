@@ -123,7 +123,6 @@ class Login extends react.Component {
 
                 headers: {
                     'content-type': 'application/json',
-                    withCredentials: true
                 },
                 method: "POST",
                 data: userinfo,
