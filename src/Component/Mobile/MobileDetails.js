@@ -74,7 +74,7 @@ class MobileDetails extends react.Component {
         }
         sessionStorage.setItem('user_cart', JSON.stringify(user_cart_item));
         if (value === 'buy') {
-            this.props.history.push('/cart');
+            this.props.router.navigate('/cart');
         }
         else {
             this.setState({ [state]: value });
