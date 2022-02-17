@@ -83,7 +83,6 @@ class Login extends react.Component {
                     method: "GET"
                 }
             ).then(res => {
-                console.log('del_orders', res.data.message, res.data.user_temp_order.items);
                 if (res.data.user_temp_order && res.data.user_temp_order.items && res.data.user_temp_order.items.length > 0) {
                     user_temp_cart_items = res.data.user_temp_order.items;
                     sessionStorage.setItem('user_cart', JSON.stringify(user_temp_cart_items));
@@ -101,7 +100,6 @@ class Login extends react.Component {
     }
     saveUserLoggedInfo = () => {
         const { username, jwt_token } = this.state;
-        console.log('usrname', username, 'jwt', jwt_token);
         sessionStorage.setItem('username', username);
         sessionStorage.setItem('jwt_token', jwt_token);
 
@@ -117,7 +115,6 @@ class Login extends react.Component {
             email,
             password
         }
-        console.log('info', userinfo);
         axios(
             {
                 url: "https://amazon-clone-db.herokuapp.com/api/user/Login",
@@ -133,7 +130,6 @@ class Login extends react.Component {
                 this.setState({ usrMsg: res.data.message, username: res.data.username, jwt_token: res.data.jwt });
             else
                 this.setState({ usrMsg: res.data.message });
-            console.log('res', res);
         })
             .catch(err => console.log('err', err))
         setTimeout(() => {

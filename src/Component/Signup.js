@@ -35,7 +35,6 @@ class Signup extends react.Component {
             email,
             password
         }
-        console.log('info', userinfo);
         axios(
             {
                 url: "https://amazon-clone-db.herokuapp.com/api/user/Register",

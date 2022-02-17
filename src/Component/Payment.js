@@ -121,14 +121,11 @@ class Payment extends react.Component {
             amount: subtotal,
             email
         };
-        console.log('payobj', paymentObj);
         this.getData(paymentObj).then(response => {
-            console.log('resp', response);
             var information = {
                 action: "https://securegw-stage.paytm.in/order/process",
                 params: response
             }
-            console.log('info', information);
             this.post(information)
         })
     }

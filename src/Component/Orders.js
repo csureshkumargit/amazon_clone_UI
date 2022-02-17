@@ -12,7 +12,6 @@ class Orders extends react.Component {
     }
     componentDidMount() {
         const { username } = queryString.parse(this.props.router.location.search);
-        console.log('usr', username);
         axios({
             url: `https://amazon-clone-db.herokuapp.com/api/orders/${username}`,
             headers: {

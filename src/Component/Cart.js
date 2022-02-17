@@ -32,11 +32,9 @@ class Cart extends react.Component {
         if (sessionStorage.getItem('user_cart') && sessionStorage.getItem('username') &&
             sessionStorage.getItem('jwt_token') && sessionStorage.getItem('user_cart').length > 0 &&
             sessionStorage.getItem('username').length > 0 && sessionStorage.getItem('jwt_token').length > 0) {
-            console.log('true', 1);
             this.props.router.navigate('/payment');
         }
         else {
-            console.log('true', 2);
             this.setState({ modalIsOpenforusertoSignIn: true });
         }
     }
@@ -90,17 +88,16 @@ class Cart extends react.Component {
         if (operation === "add") {
             update_item.qty = update_item.qty + 1;
             update_result_cart_items[index] = update_item;
-            console.log('add', update_item);
+
         }
         else {
             if (update_item.qty === 1) {
                 update_result_cart_items.splice(index, 1);
-                console.log('slice', update_result_cart_items);
+
             }
             else {
                 update_item.qty = update_item.qty - 1;
                 update_result_cart_items[index] = update_item;
-                console.log('sub', update_item);
             }
         }
 
