@@ -90,7 +90,7 @@ class Searchproduct extends react.Component {
                                 Price: {resultitem.price && resultitem.price > 0 ? `${resultitem.price_symbol}${resultitem.price}` : 'Contact Support'}
                             </div>
                             <div className="prime-item">
-                                {resultitem.has_prime == true ? <img src="https://www.nicepng.com/png/detail/115-1159983_amazon-prime-logo-prime-amazon.png" alt="prime-img 
+                                {resultitem.has_prime === true ? <img src="https://www.nicepng.com/png/detail/115-1159983_amazon-prime-logo-prime-amazon.png" alt="prime-img 
                                         "/> : <p className="prime-desc">Not Eligible for Prime</p>}
                             </div>
 
