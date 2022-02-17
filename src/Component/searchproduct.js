@@ -2,7 +2,8 @@ import react from "react";
 import queryString from "query-string";
 import axios from "axios";
 import '../Styles/searchproduct.css';
-class searchproduct extends react.Component {
+import WithRouter from "./WithRouter";
+class Searchproduct extends react.Component {
     constructor() {
         super();
         this.state = {
@@ -12,10 +13,10 @@ class searchproduct extends react.Component {
     }
 
     checkforItemDetail = (product, productId) => {
-        this.props.history.push(`${product}/detail?productId=${productId}`);
+        this.props.router.navigate(`/${product}/detail?productId=${productId}`);
     }
     componentDidUpdate(prevProps, prevState) {
-        let { searchproductword } = queryString.parse(this.props.location.search);
+        let { searchproductword } = queryString.parse(this.props.router.location.search);
         console.log('sp', searchproductword);
         const { searchproducts, searchword } = this.state;
         console.log('sp1', prevState.searchword);
@@ -33,7 +34,7 @@ class searchproduct extends react.Component {
     }
 
     componentDidMount() {
-        const { searchproductword } = queryString.parse(this.props.location.search);
+        const { searchproductword } = queryString.parse(this.props.router.location.search);
         this.setState({ searchword: searchproductword });
         axios(
             {
@@ -110,4 +111,4 @@ class searchproduct extends react.Component {
 
     }
 }
-export default searchproduct;
+export default WithRouter(Searchproduct);

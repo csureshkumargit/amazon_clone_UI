@@ -6,6 +6,7 @@ import '../../Styles/Electronics/ElectronicsDetails.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import Modal from 'react-modal';
+import WithRouter from "../WithRouter";
 
 const customStyles = {
     content: {
@@ -72,7 +73,7 @@ class ElectronicsDetails extends react.Component {
         }
         sessionStorage.setItem('user_cart', JSON.stringify(user_cart_item));
         if (value === 'buy') {
-            this.props.history.push('/cart');
+            this.props.router.navigate('/cart');
         }
         else {
             this.setState({ [state]: value });
@@ -84,10 +85,10 @@ class ElectronicsDetails extends react.Component {
         this.setState({ [state]: value });
     }
     navigateToCart = () => {
-        this.props.history.push('/cart');
+        this.props.router.navigate('/cart');
     }
     componentDidMount() {
-        const { productId } = queryString.parse(this.props.location.search)
+        const { productId } = queryString.parse(this.props.router.location.search)
         axios({
             url: `https://amazon-clone-db.herokuapp.com/electronics/details/${productId}`,
             Headers: {
@@ -199,4 +200,4 @@ class ElectronicsDetails extends react.Component {
     }
 }
 
-export default ElectronicsDetails;
+export default WithRouter(ElectronicsDetails);

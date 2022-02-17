@@ -2,6 +2,7 @@ import react from "react";
 import queryString from "query-string";
 import axios from "axios";
 import '../../Styles/Mobile/MobileFilter.css';
+import WithRouter from "../WithRouter";
 
 class MobileFilter extends react.Component {
     constructor() {
@@ -92,7 +93,7 @@ class MobileFilter extends react.Component {
         this.filterMobile(filterobj);
     }
     checkforItemDetail = (productId) => {
-        this.props.history.push(`detail?productId=${productId}`);
+        this.props.router.navigate(`/mobile/detail?productId=${productId}`);
     }
     showfilterpage = () => {
         document.getElementById('mobile-filter-id').style.display = 'block';
@@ -104,7 +105,7 @@ class MobileFilter extends react.Component {
         element.style.display = 'none';
     }
     componentDidMount() {
-        const { mobile_id } = queryString.parse(this.props.location.search);
+        const { mobile_id } = queryString.parse(this.props.router.location.search);
         axios({
             url: `https://amazon-clone-db.herokuapp.com/mobile/${mobile_id}`,
             Headers: {
@@ -249,4 +250,4 @@ class MobileFilter extends react.Component {
     }
 }
 
-export default MobileFilter;
+export default WithRouter(MobileFilter);

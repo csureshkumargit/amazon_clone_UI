@@ -2,6 +2,7 @@ import react from "react";
 import queryString from "query-string";
 import axios from "axios";
 import '../../Styles/Kids/KidsFilter.css';
+import WithRouter from "../WithRouter";
 
 class KidsFilter extends react.Component {
     constructor() {
@@ -69,7 +70,7 @@ class KidsFilter extends react.Component {
         this.filterKidsCollections(filterobj);
     }
     checkforItemDetail = (productId) => {
-        this.props.history.push(`detail?productId=${productId}`);
+        this.props.router.navigate(`/kids/detail?productId=${productId}`);
     }
     showfilterpage = () => {
         document.getElementById('kids-filter-id').style.display = 'block';
@@ -81,7 +82,7 @@ class KidsFilter extends react.Component {
         element.style.display = 'none';
     }
     componentDidMount() {
-        const { fashion_id_kids } = queryString.parse(this.props.location.search);
+        const { fashion_id_kids } = queryString.parse(this.props.router.location.search);
         this.setState({ fashion_id_kids: fashion_id_kids });
         axios({
             url: `https://amazon-clone-db.herokuapp.com/fashionkids/${fashion_id_kids}`,
@@ -195,4 +196,4 @@ class KidsFilter extends react.Component {
     }
 }
 
-export default KidsFilter;
+export default WithRouter(KidsFilter);

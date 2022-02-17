@@ -6,6 +6,7 @@ import '../../Styles/Mobile/MobileDetails.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import Modal from 'react-modal';
+import WithRouter from "../WithRouter";
 
 
 const customStyles = {
@@ -85,10 +86,10 @@ class MobileDetails extends react.Component {
         this.setState({ [state]: value });
     }
     navigateToCart = () => {
-        this.props.history.push('/cart');
+        this.props.router.navigate('/cart');
     }
     componentDidMount() {
-        const { productId } = queryString.parse(this.props.location.search)
+        const { productId } = queryString.parse(this.props.router.location.search)
         axios({
             url: `https://amazon-clone-db.herokuapp.com/mobile/details/${productId}`,
             Headers: {
@@ -200,4 +201,4 @@ class MobileDetails extends react.Component {
     }
 }
 
-export default MobileDetails;
+export default WithRouter(MobileDetails);

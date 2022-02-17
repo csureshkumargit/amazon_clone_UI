@@ -3,6 +3,7 @@ import { Component } from "react";
 import Modal from 'react-modal';
 import '../Styles/Cart.css';
 import axios from "axios";
+import WithRouter from "./WithRouter";
 const customStyles = {
     content: {
         top: '50%',
@@ -32,7 +33,7 @@ class Cart extends react.Component {
             sessionStorage.getItem('jwt_token') && sessionStorage.getItem('user_cart').length > 0 &&
             sessionStorage.getItem('username').length > 0 && sessionStorage.getItem('jwt_token').length > 0) {
             console.log('true', 1);
-            this.props.history.push('/payment');
+            this.props.router.navigate('/payment');
         }
         else {
             console.log('true', 2);
@@ -41,7 +42,7 @@ class Cart extends react.Component {
     }
 
     navigateToLoginPage = () => {
-        this.props.history.push('/login');
+        this.props.router.navigate('/login');
     }
     handlemodal = (state, value) => {
         this.setState({ [state]: value });
@@ -224,4 +225,4 @@ class Cart extends react.Component {
     }
 }
 
-export default Cart;
+export default WithRouter(Cart);

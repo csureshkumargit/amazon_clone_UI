@@ -2,6 +2,7 @@ import react from "react";
 import axios from "axios";
 import Carousel from 'react-elastic-carousel';
 import '../../Styles/Mobile/Mobile.css';
+import WithRouter from "../WithRouter";
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from 'react-responsive-carousel';
 
@@ -22,7 +23,7 @@ class Mobile extends react.Component {
     }
     navigateToMobileByBrands = (mobileId) => {
 
-        this.props.history.push(`mobile/filter?mobile_id=${mobileId}`)
+        this.props.router.navigate(`/mobile/filter?mobile_id=${mobileId}`)
     }
     componentDidMount() {
 
@@ -62,4 +63,4 @@ class Mobile extends react.Component {
 
 }
 
-export default Mobile;
+export default WithRouter(Mobile);

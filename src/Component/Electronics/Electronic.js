@@ -2,6 +2,7 @@ import react from "react";
 import axios from "axios";
 import Carousel from 'react-elastic-carousel';
 import '../../Styles/Electronics/Electronic.css';
+import WithRouter from "../WithRouter";
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from 'react-responsive-carousel';
 
@@ -22,7 +23,7 @@ class Electronic extends react.Component {
     }
     navigateToElectronicsByItem = (electronicId) => {
 
-        this.props.history.push(`electronics/filter?electronics_id=${electronicId}`)
+        this.props.router.navigate(`/electronics/filter?electronics_id=${electronicId}`)
     }
     componentDidMount() {
 
@@ -63,4 +64,4 @@ class Electronic extends react.Component {
 
 }
 
-export default Electronic;
+export default WithRouter(Electronic);

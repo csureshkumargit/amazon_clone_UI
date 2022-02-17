@@ -2,6 +2,7 @@ import react from "react";
 import axios from "axios";
 import Carousel from 'react-elastic-carousel';
 import '../../Styles/HomeAppliances/HomeAppliance.css';
+import WithRouter from "../WithRouter";
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from 'react-responsive-carousel';
 
@@ -22,7 +23,7 @@ class HomeAppliance extends react.Component {
     }
     navigateToAppliancesByBrand = (applID) => {
 
-        this.props.history.push(`home-appliances/filter?home_appl_id=${applID}`)
+        this.props.router.navigate(`/home-appliances/filter?home_appl_id=${applID}`)
     }
     componentDidMount() {
 
@@ -62,4 +63,4 @@ class HomeAppliance extends react.Component {
 
 }
 
-export default HomeAppliance;
+export default WithRouter(HomeAppliance);

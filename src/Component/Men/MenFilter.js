@@ -2,6 +2,7 @@ import react from "react";
 import queryString from "query-string";
 import axios from "axios";
 import '../../Styles/Men/MenFilter.css';
+import WithRouter from "../WithRouter";
 
 class MenFilter extends react.Component {
     constructor() {
@@ -69,7 +70,7 @@ class MenFilter extends react.Component {
         this.filterMenCollections(filterobj);
     }
     checkforItemDetail = (productId) => {
-        this.props.history.push(`detail?productId=${productId}`);
+        this.props.router.navigate(`/men/detail?productId=${productId}`);
     }
     showfilterpage = () => {
         document.getElementById('men-filter-id').style.display = 'block';
@@ -81,7 +82,7 @@ class MenFilter extends react.Component {
         element.style.display = 'none';
     }
     componentDidMount() {
-        const { fashion_id_men } = queryString.parse(this.props.location.search);
+        const { fashion_id_men } = queryString.parse(this.props.router.location.search);
         this.setState({ fashion_id_men: fashion_id_men });
         axios({
             url: `https://amazon-clone-db.herokuapp.com/fashionmen/${fashion_id_men}`,
@@ -195,4 +196,4 @@ class MenFilter extends react.Component {
     }
 }
 
-export default MenFilter;
+export default WithRouter(MenFilter);

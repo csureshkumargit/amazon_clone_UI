@@ -2,6 +2,7 @@ import react from "react";
 import axios from "axios";
 import queryString from "query-string";
 import '../Styles/Orders.css';
+import WithRouter from "./WithRouter";
 class Orders extends react.Component {
     constructor() {
         super();
@@ -10,7 +11,7 @@ class Orders extends react.Component {
         }
     }
     componentDidMount() {
-        const { username } = queryString.parse(this.props.location.search);
+        const { username } = queryString.parse(this.props.router.location.search);
         console.log('usr', username);
         axios({
             url: `https://amazon-clone-db.herokuapp.com/api/orders/${username}`,
@@ -66,4 +67,4 @@ class Orders extends react.Component {
     }
 }
 
-export default Orders;
+export default WithRouter(Orders);

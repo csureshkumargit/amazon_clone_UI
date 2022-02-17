@@ -2,7 +2,7 @@ import react from "react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import Home from "./Home";
-import searchproduct from "./searchproduct";
+import Searchproduct from "./Searchproduct";
 import Login from "./Login";
 import Signup from "./Signup";
 import Mobile from "./Mobile/Mobile";
@@ -27,38 +27,41 @@ import Cart from "./Cart";
 import Payment from "./Payment";
 import Orders from "./Orders";
 import '../Styles/Router.css';
-import { BrowserRouter, Route } from "react-router-dom";
-class Router extends react.Component {
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from "react";
+class Router extends React.Component {
   render() {
     return (
       <div>
         <BrowserRouter>
           <Navigation />
-          <Route exact path='/' component={Home} />
-          <Route exact path='/searchproduct' component={searchproduct} />
-          <Route exact path='/login' component={Login} />
-          <Route exact path='/signup' component={Signup} />
-          <Route exact path='/mobile' component={Mobile} />
-          <Route exact path='/mobile/filter' component={MobileFilter} />
-          <Route exact path='/mobile/detail' component={MobileDetails} />
-          <Route exact path='/electronics' component={Electronic} />
-          <Route exact path='/electronics/filter' component={ElectronicsFilter} />
-          <Route exact path='/electronics/detail' component={ElectronicsDetails} />
-          <Route exact path='/men' component={Men} />
-          <Route exact path='/men/filter' component={MenFilter} />
-          <Route exact path='/men/detail' component={MenDetails} />
-          <Route exact path='/women' component={Women} />
-          <Route exact path='/women/filter' component={WomenFilter} />
-          <Route exact path='/women/detail' component={WomenDetails} />
-          <Route exact path='/kids' component={Kids} />
-          <Route exact path='/kids/filter' component={KidsFilter} />
-          <Route exact path='/kids/detail' component={KidsDetails} />
-          <Route exact path='/home-appliances' component={HomeAppliance} />
-          <Route exact path='/home-appliances/filter' component={HomeApplianceFilter} />
-          <Route exact path='/home-appliances/detail' component={HomeApplianceDetails} />
-          <Route exact path='/cart' component={Cart} />
-          <Route exact path='/payment' component={Payment} />
-          <Route exact path='/order' component={Orders} />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/searchproduct' element={<Searchproduct />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/mobile' element={<Mobile />} />
+            <Route path='/mobile/filter' element={<MobileFilter />} />
+            <Route path='/mobile/detail' element={<MobileDetails />} />
+            <Route path='/electronics' element={<Electronic />} />
+            <Route path='/electronics/filter' element={<ElectronicsFilter />} />
+            <Route path='/electronics/detail' element={<ElectronicsDetails />} />
+            <Route path='/men' element={<Men />} />
+            <Route path='/men/filter' element={<MenFilter />} />
+            <Route path='/men/detail' element={<MenDetails />} />
+            <Route path='/women' element={<Women />} />
+            <Route path='/women/filter' element={<WomenFilter />} />
+            <Route path='/women/detail' element={<WomenDetails />} />
+            <Route path='/kids' element={<Kids />} />
+            <Route path='/kids/filter' element={<KidsFilter />} />
+            <Route path='/kids/detail' element={<KidsDetails />} />
+            <Route path='/home-appliances' element={<HomeAppliance />} />
+            <Route path='/home-appliances/filter' element={<HomeApplianceFilter />} />
+            <Route path='/home-appliances/detail' element={<HomeApplianceDetails />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/payment' element={<Payment />} />
+            <Route path='/order' element={<Orders />} />
+          </Routes>
           <Footer />
         </BrowserRouter>
       </div>

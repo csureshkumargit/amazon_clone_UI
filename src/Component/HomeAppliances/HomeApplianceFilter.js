@@ -2,6 +2,7 @@ import react from "react";
 import queryString from "query-string";
 import axios from "axios";
 import '../../Styles/HomeAppliances/HomeApplianceFilter.css';
+import WithRouter from "../WithRouter";
 
 class HomeApplianceFilter extends react.Component {
     constructor() {
@@ -85,7 +86,7 @@ class HomeApplianceFilter extends react.Component {
         this.filterHomeAppliances(filterobj);
     }
     checkforItemDetail = (productId) => {
-        this.props.history.push(`detail?productId=${productId}`);
+        this.props.router.navigate(`/home-appliances/detail?productId=${productId}`);
     }
     showfilterpage = () => {
         document.getElementById('appliance-filter-id').style.display = 'block';
@@ -97,7 +98,7 @@ class HomeApplianceFilter extends react.Component {
         element.style.display = 'none';
     }
     componentDidMount() {
-        const { home_appl_id } = queryString.parse(this.props.location.search);
+        const { home_appl_id } = queryString.parse(this.props.router.location.search);
         axios({
             url: `https://amazon-clone-db.herokuapp.com/appliances/${home_appl_id}`,
             Headers: {
@@ -222,4 +223,4 @@ class HomeApplianceFilter extends react.Component {
     }
 }
 
-export default HomeApplianceFilter;
+export default WithRouter(HomeApplianceFilter);

@@ -2,6 +2,7 @@ import react from "react";
 import axios from "axios";
 import Carousel from 'react-elastic-carousel';
 import '../../Styles/Men/Men.css';
+import WithRouter from "../WithRouter";
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from 'react-responsive-carousel';
 
@@ -22,7 +23,7 @@ class Men extends react.Component {
     }
     navigateToMenCollectionsByItem = (menId) => {
 
-        this.props.history.push(`men/filter?fashion_id_men=${menId}`)
+        this.props.router.navigate(`/men/filter?fashion_id_men=${menId}`)
     }
     componentDidMount() {
 
@@ -63,4 +64,4 @@ class Men extends react.Component {
 
 }
 
-export default Men;
+export default WithRouter(Men);

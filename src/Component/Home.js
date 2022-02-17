@@ -1,6 +1,7 @@
 import react from "react";
 import Carousel from 'react-elastic-carousel';
 import axios from "axios";
+import WithRouter from "./WithRouter";
 import '../Styles/Home.css';
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -21,7 +22,7 @@ class Home extends react.Component {
         }
     }
     checkforProductDetail = (product, productcode, id) => {
-        this.props.history.push(`${product}/filter?${productcode}=${id}`);
+        this.props.router.navigate(`${product}/filter?${productcode}=${id}`);
     }
     componentDidMount() {
 
@@ -185,4 +186,4 @@ class Home extends react.Component {
     }
 }
 
-export default Home;
+export default WithRouter(Home);

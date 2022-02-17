@@ -1,7 +1,7 @@
 import react from "react";
 import '../Styles/Navigation.css';
 import axios from "axios";
-import { withRouter } from "react-router";
+import WithRouter from "./WithRouter";
 
 import Modal from 'react-modal';
 
@@ -58,7 +58,7 @@ class Navigation extends react.Component {
         }
     }
     navigateToHome = () => {
-        this.props.history.push('/');
+        this.props.router.navigate('/');
     }
     getCustomerDeliverLocation = () => {
         const { location, zipcode } = this.state;
@@ -82,16 +82,16 @@ class Navigation extends react.Component {
     navigateToSearchProduct = () => {
         const { searchproductword } = this.state;
         if (searchproductword && searchproductword.length > 1) {
-            this.props.history.push(`/searchproduct?searchproductword=${searchproductword}`);
+            this.props.router.navigate(`/searchproduct?searchproductword=${searchproductword}`);
         }
         return;
     }
     navigateToLoginPage = () => {
-        this.props.history.push('/login');
+        this.props.router.navigate('/login');
         this.handleModal('modalIsOpenforLogin', false)
     }
     navigateToSignupPage = () => {
-        this.props.history.push('/signup');
+        this.props.router.navigate('/signup');
         this.handleModal('modalIsOpenforLogin', false)
     }
     toggleProductsnavigation = () => {
@@ -104,26 +104,27 @@ class Navigation extends react.Component {
         }
     }
     navigateToMobile = () => {
-        this.props.history.push('/mobile');
+        this.props.router.navigate('/mobile');
     }
     navigateToElectronics = () => {
-        this.props.history.push('/electronics');
+        this.props.router.navigate('/electronics');
     }
     navigateToMenCollections = () => {
-        this.props.history.push('/men');
+        //this.props.router.navigate('/men');
+        this.props.router.navigate('/men');
     }
     navigateToWomenCollections = () => {
-        this.props.history.push('/women');
+        this.props.router.navigate('/women');
     }
     navigateToKidsCollections = () => {
-        this.props.history.push('/kids');
+        this.props.router.navigate('/kids');
     }
     navigateToHomeAppliances = () => {
-        this.props.history.push('/home-appliances');
+        this.props.router.navigate('/home-appliances');
     }
     navigateToCart = () => {
         if (sessionStorage.getItem('username') && sessionStorage.getItem('username').length > 0) {
-            this.props.history.push(`/cart`);
+            this.props.router.navigate(`/cart`);
         }
         return;
     }
@@ -133,7 +134,7 @@ class Navigation extends react.Component {
     getRecentOrderDetails = () => {
         if (sessionStorage.getItem('username') && sessionStorage.getItem('username').length > 0) {
             let username = sessionStorage.getItem('username');
-            this.props.history.push(`/order/?username=${username}`);
+            this.props.router.navigate(`/order/?username=${username}`);
             this.handleModal('modalIsOpenforLogin', false);
         }
         return;
@@ -165,7 +166,7 @@ class Navigation extends react.Component {
             sessionStorage.setItem('user_cart', '');
             sessionStorage.setItem('jwt_token', '');
             sessionStorage.setItem('username', '');
-            this.props.history.push('/');
+            this.props.router.navigate('/');
             this.handleModal('modalIsOpenforLogin', false);
         }
         return;
@@ -330,4 +331,4 @@ class Navigation extends react.Component {
     }
 }
 
-export default withRouter(Navigation);
+export default WithRouter(Navigation);

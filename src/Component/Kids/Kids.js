@@ -2,6 +2,7 @@ import react from "react";
 import axios from "axios";
 import Carousel from 'react-elastic-carousel';
 import '../../Styles/Kids/Kids.css';
+import WithRouter from "../WithRouter";
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import { Carousel } from 'react-responsive-carousel';
 
@@ -22,7 +23,7 @@ class Kids extends react.Component {
     }
     navigateToKidsCollectionsByItem = (kidsId) => {
 
-        this.props.history.push(`kids/filter?fashion_id_kids=${kidsId}`)
+        this.props.router.navigate(`/kids/filter?fashion_id_kids=${kidsId}`)
     }
     componentDidMount() {
 
@@ -63,4 +64,4 @@ class Kids extends react.Component {
 
 }
 
-export default Kids;
+export default WithRouter(Kids);

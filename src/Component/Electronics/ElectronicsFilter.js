@@ -2,6 +2,7 @@ import react from "react";
 import queryString from "query-string";
 import axios from "axios";
 import '../../Styles/Electronics/ElectronicsFilter.css';
+import WithRouter from "../WithRouter";
 
 class ElecronicsFilter extends react.Component {
     constructor() {
@@ -78,7 +79,7 @@ class ElecronicsFilter extends react.Component {
         this.filterElectronicsItems(filterobj);
     }
     checkforItemDetail = (productId) => {
-        this.props.history.push(`detail?productId=${productId}`);
+        this.props.router.navigate(`/electronics/detail?productId=${productId}`);
     }
     showfilterpage = () => {
         document.getElementById('electronics-filter-id').style.display = 'block';
@@ -90,7 +91,7 @@ class ElecronicsFilter extends react.Component {
         element.style.display = 'none';
     }
     componentDidMount() {
-        const { electronics_id } = queryString.parse(this.props.location.search);
+        const { electronics_id } = queryString.parse(this.props.router.location.search);
         this.setState({ electronics_id: electronics_id });
         axios({
             url: `https://amazon-clone-db.herokuapp.com/electronics/${electronics_id}`,
@@ -243,4 +244,4 @@ class ElecronicsFilter extends react.Component {
     }
 }
 
-export default ElecronicsFilter;
+export default WithRouter(ElecronicsFilter);

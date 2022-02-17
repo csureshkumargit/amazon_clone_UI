@@ -1,5 +1,6 @@
 import react from "react";
 import axios from "axios";
+import WithRouter from "./WithRouter";
 import '../Styles/Login.css';
 class Login extends react.Component {
     constructor() {
@@ -65,7 +66,7 @@ class Login extends react.Component {
             sessionStorage.getItem('jwt_token') && sessionStorage.getItem('user_cart').length > 0 &&
             sessionStorage.getItem('username').length > 0 && sessionStorage.getItem('jwt_token').length > 0) {
             this.saveUsertempOrders();
-            this.props.history.push('/payment');
+            this.props.router.navigate('/payment');
         }
         else if (!sessionStorage.getItem('user_cart') && sessionStorage.getItem('username') &&
             sessionStorage.getItem('jwt_token') &&
@@ -90,11 +91,11 @@ class Login extends react.Component {
 
             })
                 .catch(err => console.log('err', err))
-            this.props.history.push('/');
+            this.props.router.navigate('/');
         }
 
         else {
-            this.props.history.push('/');
+            this.props.router.navigate('/');
 
         }
     }
@@ -106,7 +107,7 @@ class Login extends react.Component {
 
     }
     navigateToSignupPage = () => {
-        this.props.history.push('/signup');
+        this.props.router.navigate('/signup');
 
     }
     checkUserLogin = (e) => {
@@ -125,8 +126,7 @@ class Login extends react.Component {
                     'content-type': 'application/json',
                 },
                 method: "POST",
-                data: userinfo,
-                withCredentials: true
+                data: userinfo
             }
         ).then(res => {
             if (res.data.isAuthenticated)
@@ -176,4 +176,4 @@ class Login extends react.Component {
     }
 }
 
-export default Login;
+export default WithRouter(Login);
