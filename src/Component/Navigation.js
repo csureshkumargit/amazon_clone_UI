@@ -65,8 +65,9 @@ class Navigation extends react.Component {
 
         axios({
             url: `https://api.postalpincode.in/pincode/${zipcode}`,
-            Headers: {
-                'content-type': 'application/json'
+            headers: {
+                'content-type': 'application/json',
+                'Access-Control-Allow-Origin': 'https://amazon-clone-shop.herokuapp.com',
             },
             method: 'GET'
         }).then(res => this.setState({
