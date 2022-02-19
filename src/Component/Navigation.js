@@ -67,7 +67,9 @@ class Navigation extends react.Component {
             url: `https://api.postalpincode.in/pincode/${zipcode}`,
             headers: {
                 'content-type': 'application/json',
-                'Access-Control-Allow-Origin': 'https://amazon-clone-shop.herokuapp.com',
+                'Access-Control-Allow-Origin':'https://amazon-clone-shop.herokuapp.com',
+                'Access-Control-Allow-Methods':'GET',
+                'Access-Control-Allow-Headers': 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept'
             },
             method: 'GET'
         }).then(res => this.setState({
